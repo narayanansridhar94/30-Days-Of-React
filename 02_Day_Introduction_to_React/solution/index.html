@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root')
+      const mainStyle = {
+          background : 'yellow'
+      };
+      // JSX element
+      const nameVal = <h1 style={{ fontWeight : '   bold '}}>Narayanan</h1>;
+      const footer = <footer>Copy rights @2020 </footer>;
+
+
+       const arr = [5];
+      const user = (
+          <div style={mainStyle}>
+
+          {nameVal}
+            <p style={{ fontSize : '20px'}}>Country : India</p>
+            <p>Title : Software Engineer</p>
+            <p>Gender : Male</p>
+            <p style={{ fontStyle: 'italic'}}>Email : NarayananSridhar94@gmail.com</p>
+            <p>Phone : 8807929444</p>
+            {footer}
+            <div>{0+1} {"st".concat("r")}  {new Date().toDateString()}</div>
+            <div>
+                { arr[0] }
+                <br />
+                { arr.push(10,123,3,2,32,2,23) }
+            </div>
+          </div>
+      )
+
+      
+      // we render the JSX element using the ReactDOM package
+      // ReactDOM has the render method and the render method takes two arguments
+      ReactDOM.render(user, rootElement)
+    </script>
+  </body>
+</html>
